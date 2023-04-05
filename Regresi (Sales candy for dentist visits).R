@@ -10,12 +10,12 @@ sales
 dentist_visits
 
 
-#2. Merge two datasets using R and column elimination
+#2. Merge two datasets using R 
 merge(sales, dentist_visits, by=c('Bulan','Tahun'))
 combined_data <- merge(sales, dentist_visits, by.x=c('Bulan','Tahun'), by.y=c('Bulan','Tahun'), sort=FALSE)
 combined_data
 
-#3. Summarize the data to be used in the combined data
+#3. Summarize the data to be used in the combined data and column elimination
 combined_data<- data.frame(month=combined_data$Bulan,
                            year=combined_data$Tahun,
                            dentist_visits=combined_data$tingkat.kunjungan.ke.dokter.gigi,
